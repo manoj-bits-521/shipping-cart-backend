@@ -1,15 +1,32 @@
+
 spring:
-  jpa:
-    generate-ddl: true
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
+    driver-class-name: org.postgresql.Driver
     username: postgres
     password: Welcome123
+    url: jdbc:postgresql://localhost/postgres
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: create
+    database: postgresql
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false;
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
 
-springdoc:
-  api-docs:
-    path: /swagger-ui.html
+
+  queries:
+    users-query: select email, password, active from users where email=?
+    roles-query: select email, role from users where email=?
+server:
+  servlet:
+    contextPath: /api
 
 jwtSecret: mydata
 jwtExpiration: 86400
 
+springdoc:
+  api-docs:
+    path: /swagger-ui.html
