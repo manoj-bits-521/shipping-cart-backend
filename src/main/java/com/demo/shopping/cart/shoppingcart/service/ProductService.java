@@ -1,31 +1,36 @@
 package com.demo.shopping.cart.shoppingcart.service;
 
-import com.demo.shopping.cart.shoppingcart.model.Products;
+
+import com.demo.shopping.cart.shoppingcart.domain.ProductInfo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 public interface ProductService {
 
-    Page<Products> findAll(Pageable pageable);
+    ProductInfo findOne(String productId);
 
-    Products findOne(String productId);
 
-    Page<Products> findUpAll(Pageable pageable);
+    Page<ProductInfo> findUpAll(Pageable pageable);
 
-    Page<Products> findAllInCategory(Integer categoryType, Pageable pageable);
+    Page<ProductInfo> findAll(Pageable pageable);
+
+    Page<ProductInfo> findAllInCategory(Integer categoryType, Pageable pageable);
+
 
     void increaseStock(String productId, int amount);
 
+
     void decreaseStock(String productId, int amount);
 
-    Products offSale(String productId);
+    ProductInfo offSale(String productId);
 
-    Products onSale(String productId);
+    ProductInfo onSale(String productId);
 
-    Products update(Products productInfo);
+    ProductInfo update(ProductInfo productInfo);
 
-    Products save(Products productInfo);
+    ProductInfo save(ProductInfo productInfo);
 
     void delete(String productId);
+
 
 }

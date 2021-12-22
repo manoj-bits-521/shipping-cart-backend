@@ -1,9 +1,11 @@
-package com.demo.shopping.cart.shoppingcart.dto;
+package com.demo.shopping.cart.shoppingcart.enums;
 
 import lombok.Getter;
 
+
 @Getter
 public enum ResultEnum {
+
     PARAM_ERROR(1, "Parameter Error!"),
     PRODUCT_NOT_EXIST(10, "Product does not exit!"),
     PRODUCT_NOT_ENOUGH(11, "Not enough products in stock!"),

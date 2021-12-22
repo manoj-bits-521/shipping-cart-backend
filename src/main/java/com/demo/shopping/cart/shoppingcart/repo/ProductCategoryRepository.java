@@ -1,16 +1,18 @@
 package com.demo.shopping.cart.shoppingcart.repo;
 
-import com.demo.shopping.cart.shoppingcart.model.ProductCategory;
+import com.demo.shopping.cart.shoppingcart.domain.ProductCategory;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
+/**
+ * Created By Zhu Lin on 3/9/2018.
+ */
 public interface ProductCategoryRepository extends JpaRepository<ProductCategory, Integer> {
+    // Some category
     List<ProductCategory> findByCategoryTypeInOrderByCategoryTypeAsc(List<Integer> categoryTypes);
-
+    // All category
     List<ProductCategory> findAllByOrderByCategoryType();
-
+    // One category
     ProductCategory findByCategoryType(Integer categoryType);
 }

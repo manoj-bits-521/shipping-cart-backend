@@ -1,10 +1,8 @@
-package com.demo.shopping.cart.shoppingcart.model;
+package com.demo.shopping.cart.shoppingcart.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
@@ -16,8 +14,6 @@ import java.io.Serializable;
 @Entity
 @Data
 @Table(name = "users")
-@Setter
-@Getter
 @NoArgsConstructor
 public class User implements Serializable {
 
@@ -42,12 +38,25 @@ public class User implements Serializable {
     private boolean active;
     @NotEmpty
     private String role = "ROLE_CUSTOMER";
+
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonIgnore
     private Cart cart;
 
 
-
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", active=" + active +
+                ", role='" + role + '\'' +
+                '}';
+    }
 
 }
 

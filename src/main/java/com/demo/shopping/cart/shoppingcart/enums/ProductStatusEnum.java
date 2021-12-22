@@ -1,6 +1,7 @@
-package com.demo.shopping.cart.shoppingcart.dto;
+package com.demo.shopping.cart.shoppingcart.enums;
 
 import lombok.Getter;
+
 
 @Getter
 public enum ProductStatusEnum implements CodeEnum {

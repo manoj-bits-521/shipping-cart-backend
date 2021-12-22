@@ -1,9 +1,13 @@
-package com.demo.shopping.cart.shoppingcart.service.impl;
+package com.demo.shopping.cart.shoppingcart.util.exception;
 
-import com.demo.shopping.cart.shoppingcart.dto.ResultEnum;
+
+import com.demo.shopping.cart.shoppingcart.enums.ResultEnum;
+
 
 public class MyException extends RuntimeException {
-    private Integer code;
+
+    private final Integer code;
+
     public MyException(ResultEnum resultEnum) {
         super(resultEnum.getMessage());
 

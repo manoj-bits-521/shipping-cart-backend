@@ -1,7 +1,7 @@
 package com.demo.shopping.cart.shoppingcart.service.impl;
 
-import com.demo.shopping.cart.shoppingcart.model.ProductInOrder;
-import com.demo.shopping.cart.shoppingcart.model.User;
+import com.demo.shopping.cart.shoppingcart.domain.ProductInOrder;
+import com.demo.shopping.cart.shoppingcart.domain.User;
 import com.demo.shopping.cart.shoppingcart.repo.ProductInOrderRepository;
 import com.demo.shopping.cart.shoppingcart.service.ProductInOrderService;
 import org.springframework.beans.factory.annotation.Autowired;

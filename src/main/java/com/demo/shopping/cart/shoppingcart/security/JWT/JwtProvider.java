@@ -1,4 +1,4 @@
-package com.demo.shopping.cart.shoppingcart.JWT;
+package com.demo.shopping.cart.shoppingcart.security.JWT;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

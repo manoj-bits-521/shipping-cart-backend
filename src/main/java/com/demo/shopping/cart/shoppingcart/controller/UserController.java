@@ -1,10 +1,10 @@
 package com.demo.shopping.cart.shoppingcart.controller;
 
-import com.demo.shopping.cart.shoppingcart.JWT.JwtProvider;
-import com.demo.shopping.cart.shoppingcart.model.User;
-import com.demo.shopping.cart.shoppingcart.response.JwtResponse;
-import com.demo.shopping.cart.shoppingcart.response.LoginForm;
+import com.demo.shopping.cart.shoppingcart.domain.User;
+import com.demo.shopping.cart.shoppingcart.security.JWT.JwtProvider;
 import com.demo.shopping.cart.shoppingcart.service.UserService;
+import com.demo.shopping.cart.shoppingcart.util.LoginForm;
+import com.demo.shopping.cart.shoppingcart.util.JwtResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +18,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 
+/**
+ * Created By Zhu Lin on 1/1/2019.
+ */
 @CrossOrigin
 @RestController
 public class UserController {

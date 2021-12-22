@@ -1,8 +1,9 @@
 package com.demo.shopping.cart.shoppingcart.service;
 
-import com.demo.shopping.cart.shoppingcart.model.ProductCategory;
+import com.demo.shopping.cart.shoppingcart.domain.ProductCategory;
 
 import java.util.List;
+
 
 public interface CategoryService {
 
@@ -13,5 +14,6 @@ public interface CategoryService {
     List<ProductCategory> findByCategoryTypeIn(List<Integer> categoryTypeList);
 
     ProductCategory save(ProductCategory productCategory);
+
 
 }

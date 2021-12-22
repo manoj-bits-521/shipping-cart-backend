@@ -1,4 +1,4 @@
-package com.demo.shopping.cart.shoppingcart.model;
+package com.demo.shopping.cart.shoppingcart.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;

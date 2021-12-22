@@ -1,13 +1,11 @@
 package com.demo.shopping.cart.shoppingcart.controller;
 
 
-
-import com.demo.shopping.cart.shoppingcart.model.OrderMain;
-import com.demo.shopping.cart.shoppingcart.model.ProductInOrder;
+import com.demo.shopping.cart.shoppingcart.domain.OrderMain;
+import com.demo.shopping.cart.shoppingcart.domain.ProductInOrder;
 import com.demo.shopping.cart.shoppingcart.service.OrderService;
 import com.demo.shopping.cart.shoppingcart.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;

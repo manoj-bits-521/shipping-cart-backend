@@ -1,12 +1,14 @@
 package com.demo.shopping.cart.shoppingcart.repo;
 
 
-import com.demo.shopping.cart.shoppingcart.model.OrderMain;
+import com.demo.shopping.cart.shoppingcart.domain.OrderMain;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-
+/**
+ * Created By Zhu Lin on 3/14/2018.
+ */
 public interface OrderRepository extends JpaRepository<OrderMain, Integer> {
     OrderMain findByOrderId(Long orderId);
 

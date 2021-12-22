@@ -1,8 +1,8 @@
 package com.demo.shopping.cart.shoppingcart.service;
 
+import com.demo.shopping.cart.shoppingcart.domain.ProductInOrder;
+import com.demo.shopping.cart.shoppingcart.domain.User;
 
-import com.demo.shopping.cart.shoppingcart.model.ProductInOrder;
-import com.demo.shopping.cart.shoppingcart.model.User;
 
 public interface ProductInOrderService {
     void update(String itemId, Integer quantity, User user);

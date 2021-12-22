@@ -1,14 +1,15 @@
 package com.demo.shopping.cart.shoppingcart.service.impl;
 
 
-import com.demo.shopping.cart.shoppingcart.dto.OrderStatusEnum;
-import com.demo.shopping.cart.shoppingcart.dto.ResultEnum;
-import com.demo.shopping.cart.shoppingcart.model.OrderMain;
-import com.demo.shopping.cart.shoppingcart.model.ProductInOrder;
-import com.demo.shopping.cart.shoppingcart.model.Products;
+import com.demo.shopping.cart.shoppingcart.domain.OrderMain;
+import com.demo.shopping.cart.shoppingcart.domain.ProductInOrder;
+import com.demo.shopping.cart.shoppingcart.domain.ProductInfo;
+import com.demo.shopping.cart.shoppingcart.enums.OrderStatusEnum;
+import com.demo.shopping.cart.shoppingcart.enums.ResultEnum;
+import com.demo.shopping.cart.shoppingcart.util.exception.MyException;
 import com.demo.shopping.cart.shoppingcart.repo.OrderRepository;
-import com.demo.shopping.cart.shoppingcart.repo.ProductDetailsRepo;
 import com.demo.shopping.cart.shoppingcart.repo.ProductInOrderRepository;
+import com.demo.shopping.cart.shoppingcart.repo.ProductInfoRepository;
 import com.demo.shopping.cart.shoppingcart.repo.UserRepository;
 import com.demo.shopping.cart.shoppingcart.service.OrderService;
 import com.demo.shopping.cart.shoppingcart.service.ProductService;
@@ -18,6 +19,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+
 @Service
 public class OrderServiceImpl implements OrderService {
     @Autowired
@@ -25,7 +27,7 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     UserRepository userRepository;
     @Autowired
-    ProductDetailsRepo productInfoRepository;
+    ProductInfoRepository productInfoRepository;
     @Autowired
     ProductService productService;
     @Autowired
@@ -87,7 +89,7 @@ public class OrderServiceImpl implements OrderService {
         // Restore Stock
         Iterable<ProductInOrder> products = orderMain.getProducts();
         for (ProductInOrder productInOrder : products) {
-            Products productInfo = productInfoRepository.findByProductId(productInOrder.getProductId());
+            ProductInfo productInfo = productInfoRepository.findByProductId(productInOrder.getProductId());
             if (productInfo != null) {
                 productService.increaseStock(productInOrder.getProductId(), productInOrder.getCount());
             }

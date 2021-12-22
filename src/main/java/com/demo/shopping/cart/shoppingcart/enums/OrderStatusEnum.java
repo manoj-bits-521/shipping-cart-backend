@@ -1,4 +1,5 @@
-package com.demo.shopping.cart.shoppingcart.dto;
+package com.demo.shopping.cart.shoppingcart.enums;
+
 
 public enum OrderStatusEnum implements CodeEnum {
     NEW(0, "New OrderMain"),

@@ -1,11 +1,7 @@
-package com.demo.shopping.cart.shoppingcart.response;
+package com.demo.shopping.cart.shoppingcart.util;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
-@Setter
-@Getter
 @Data
 public class JwtResponse {
     private String token;

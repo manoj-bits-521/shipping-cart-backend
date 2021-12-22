@@ -1,9 +1,7 @@
-package com.demo.shopping.cart.shoppingcart.model;
+package com.demo.shopping.cart.shoppingcart.domain;
 
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.DynamicUpdate;
@@ -18,11 +16,10 @@ import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
+
 @Entity
 @Data
 @NoArgsConstructor
-@Setter
-@Getter
 @DynamicUpdate
 public class OrderMain implements Serializable {
     private static final long serialVersionUID = -3819883511505235030L;
@@ -53,9 +50,7 @@ public class OrderMain implements Serializable {
     @NotNull
     private BigDecimal orderAmount;
 
-    /**
-     * default 0: new order.
-     */
+
     @NotNull
     @ColumnDefault("0")
     private Integer orderStatus;

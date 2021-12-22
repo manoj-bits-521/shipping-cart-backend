@@ -1,7 +1,7 @@
 package com.demo.shopping.cart.shoppingcart.service;
 
 
-import com.demo.shopping.cart.shoppingcart.model.OrderMain;
+import com.demo.shopping.cart.shoppingcart.domain.OrderMain;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

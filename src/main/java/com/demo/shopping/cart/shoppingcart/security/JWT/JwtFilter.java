@@ -1,6 +1,6 @@
-package com.demo.shopping.cart.shoppingcart.JWT;
+package com.demo.shopping.cart.shoppingcart.security.JWT;
 
-import com.demo.shopping.cart.shoppingcart.model.User;
+import com.demo.shopping.cart.shoppingcart.domain.User;
 import com.demo.shopping.cart.shoppingcart.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

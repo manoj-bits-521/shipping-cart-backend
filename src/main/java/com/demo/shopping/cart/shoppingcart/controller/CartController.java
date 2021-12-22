@@ -1,10 +1,10 @@
 package com.demo.shopping.cart.shoppingcart.controller;
 
 
-import com.demo.shopping.cart.shoppingcart.dto.ItemForm;
-import com.demo.shopping.cart.shoppingcart.model.Cart;
-import com.demo.shopping.cart.shoppingcart.model.ProductInOrder;
-import com.demo.shopping.cart.shoppingcart.model.User;
+import com.demo.shopping.cart.shoppingcart.domain.Cart;
+import com.demo.shopping.cart.shoppingcart.domain.ProductInOrder;
+import com.demo.shopping.cart.shoppingcart.domain.User;
+import com.demo.shopping.cart.shoppingcart.form.ItemForm;
 import com.demo.shopping.cart.shoppingcart.repo.ProductInOrderRepository;
 import com.demo.shopping.cart.shoppingcart.service.CartService;
 import com.demo.shopping.cart.shoppingcart.service.ProductInOrderService;
@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import java.security.Principal;
 import java.util.Collection;
 import java.util.Collections;
+
 
 @CrossOrigin
 @RestController
@@ -73,7 +74,6 @@ public class CartController {
     public void deleteItem(@PathVariable("itemId") String itemId, Principal principal) {
         User user = userService.findOne(principal.getName());
         cartService.delete(itemId, user);
-        // flush memory into DB
     }
 
 

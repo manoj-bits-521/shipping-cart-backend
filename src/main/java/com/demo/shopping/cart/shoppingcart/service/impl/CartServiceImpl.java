@@ -1,11 +1,12 @@
 package com.demo.shopping.cart.shoppingcart.service.impl;
 
 
-import com.demo.shopping.cart.shoppingcart.dto.ResultEnum;
-import com.demo.shopping.cart.shoppingcart.model.Cart;
-import com.demo.shopping.cart.shoppingcart.model.OrderMain;
-import com.demo.shopping.cart.shoppingcart.model.ProductInOrder;
-import com.demo.shopping.cart.shoppingcart.model.User;
+import com.demo.shopping.cart.shoppingcart.domain.Cart;
+import com.demo.shopping.cart.shoppingcart.domain.OrderMain;
+import com.demo.shopping.cart.shoppingcart.domain.ProductInOrder;
+import com.demo.shopping.cart.shoppingcart.domain.User;
+import com.demo.shopping.cart.shoppingcart.enums.ResultEnum;
+import com.demo.shopping.cart.shoppingcart.util.exception.MyException;
 import com.demo.shopping.cart.shoppingcart.repo.CartRepository;
 import com.demo.shopping.cart.shoppingcart.repo.OrderRepository;
 import com.demo.shopping.cart.shoppingcart.repo.ProductInOrderRepository;
@@ -20,6 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Collection;
 import java.util.Optional;
 import java.util.Set;
+
 
 @Service
 public class CartServiceImpl implements CartService {
